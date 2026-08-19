@@ -18,10 +18,9 @@ export const site = {
   description:
     "Portafolio de proyectos de Inteligencia Artificial: procesamiento de lenguaje natural, visión por computador, automatización y modelos de lenguaje.",
 
-  /** TODO: sustituye por tu rol real. */
-  role: "Ingeniero de Inteligencia Artificial",
+  role: "Ingeniero Químico · Refrigeración Industrial & Gases Fluorados",
 
-  email: "carregui@grit.es",
+  email: "carlosarregui_96@hotmail.com",
 
   /**
    * URL pública del sitio, usada por metadataBase, sitemap y robots.

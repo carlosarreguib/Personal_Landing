@@ -5,20 +5,20 @@ import { Section } from "@/components/ui/Section";
 import { site } from "@/data/site";
 
 /**
- * Valores/enfoque. TODO: sustituye estos tres por los tuyos reales.
+ * Valores/enfoque, extraídos de la trayectoria real (ver Curriculum.md).
  */
 const VALUES = [
   {
-    title: "Rigor sobre novedad",
-    body: "Una métrica bien elegida y un conjunto de evaluación honesto valen más que el modelo de moda.",
+    title: "Ingeniería con normativa",
+    body: "Las soluciones de refrigeración tienen que funcionar en condiciones reales y cumplir la normativa presente y futura (UNE-EN 378, RSIF, F-Gas), no solo el papel.",
   },
   {
-    title: "Fallar de forma visible",
-    body: "Prefiero un sistema que derive a revisión humana cuando duda antes que uno que acierte de media y falle en silencio.",
+    title: "De la investigación a la planta",
+    body: "He llevado tecnologías de separación y captura de gases desde el laboratorio y la simulación hasta plantas piloto y proyectos de I+D financiados.",
   },
   {
-    title: "Que se pueda mantener",
-    body: "Código y datos pensados para que otra persona los entienda dentro de seis meses.",
+    title: "Ingeniería más datos",
+    body: "Combino el criterio técnico de la ingeniería química con herramientas de ciencia de datos e Inteligencia Artificial para acelerar decisiones y reducir incertidumbre.",
   },
 ];
 
@@ -53,16 +53,23 @@ export function AboutMe() {
                 Sobre mí
               </h2>
 
-              {/* TODO: sustituye estos dos párrafos por tu biografía real
-                  (máximo unas 200 palabras). */}
               <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-                Soy {site.name}, {site.role.toLowerCase()}. Trabajo en llevar
-                modelos de Inteligencia Artificial desde el cuaderno de pruebas
-                hasta producción, que suele ser la parte difícil.
+                Soy {site.name}, Ingeniero Químico especializado en
+                refrigeración industrial, refrigerantes fluorados y gases
+                industriales. Ayudo a instaladores, fabricantes e
+                ingenierías a convertir retos técnicos y normativos en
+                soluciones de refrigeración viables y rentables.
               </p>
               <p className="mt-4 leading-relaxed text-ink-muted">
-                [TODO: cuenta aquí tu trayectoria, en qué problemas te gusta
-                trabajar y qué te diferencia. Un par de párrafos bastan.]
+                Mi trayectoria combina más de cinco años de I+D industrial
+                en GRIT &mdash;diseñando y validando plantas piloto de
+                separación y purificación de gases, hasta la propuesta y
+                gestión de un proyecto de I+D financiado por el CDTI&mdash;
+                con un perfil técnico-comercial que traduce esa ingeniería
+                en decisiones de negocio. A ese conocimiento le he sumado
+                una formación avanzada en Inteligencia Artificial y ciencia
+                de datos, que aplico para acelerar el análisis técnico y
+                apoyar mejores decisiones.
               </p>
             </Reveal>
 
