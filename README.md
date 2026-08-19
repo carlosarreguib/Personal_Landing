@@ -156,6 +156,21 @@ Cosas que conviene no romper al tocarlo:
   1,50:1 sobre las zonas blancas del fondo y ese punto del barrido se volvía
   invisible. Si cambias la paleta del fondo, vuelve a medir el degradado.
 
+## Trayectoria y currículum
+
+`Curriculum.md`, en la raíz, es el currículum completo. La sección
+"Formación y trayectoria" de la landing
+([`Resume`](src/components/sections/Resume.tsx)) muestra solo un extracto, con
+los datos en [`src/data/resume.ts`](src/data/resume.ts).
+
+**Son dos fuentes distintas a propósito**: la landing enseña lo esencial y el
+documento guarda el detalle. Si actualizas uno, revisa el otro — no se
+sincronizan solos.
+
+Las cifras destacadas (años de experiencia, financiación CDTI, titulaciones)
+salen del currículum y son verificables. Si cambias una, comprueba que sigue
+cuadrando con `Curriculum.md`.
+
 ## Sistema de color y accesibilidad
 
 Los tokens viven en [`src/app/globals.css`](src/app/globals.css) (Tailwind 4 usa
@@ -199,10 +214,11 @@ src/
 │  ├─ layout/    Navbar*, Footer, SkipLink
 │  ├─ projects/  ProjectCarousel*, FilterBar*, TechTag, CategoryBadge,
 │  │             ProjectCard, ProjectGrid (sin uso en la landing; fase 2)
-│  ├─ sections/  Hero, AboutMe, ProjectsSection*
+│  ├─ sections/  Hero, AboutMe, Resume, ProjectsSection*
 │  └─ ui/        Container, Section, Reveal*, CoverflowCarousel*,
 │                NoiseBackground*, GradientShimmer*
-├─ data/         projects.ts ← el fichero a editar · categories.ts · site.ts
+├─ data/         projects.ts ← el fichero a editar · categories.ts ·
+│                site.ts · resume.ts
 ├─ hooks/        useReveal*, useActiveSection*
 ├─ lib/          projects.ts (accesores), cn.ts, simplexNoise.ts
 └─ types/        project.ts

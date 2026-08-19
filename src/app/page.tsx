@@ -4,6 +4,7 @@ import { SkipLink } from "@/components/layout/SkipLink";
 import { AboutMe } from "@/components/sections/AboutMe";
 import { Hero } from "@/components/sections/Hero";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { Resume } from "@/components/sections/Resume";
 import { site } from "@/data/site";
 import { getAllProjects } from "@/lib/projects";
 
@@ -34,6 +35,7 @@ export default function Home() {
       <main id="contenido">
         <Hero />
         <ProjectsSection projects={projects} />
+        <Resume />
         <AboutMe />
       </main>
       <Footer />

@@ -43,6 +43,7 @@ export const site = {
   nav: [
     { label: "Inicio", href: "#inicio", id: "inicio" },
     { label: "Proyectos", href: "#proyectos", id: "proyectos" },
+    { label: "Trayectoria", href: "#trayectoria", id: "trayectoria" },
     { label: "Sobre mí", href: "#sobre-mi", id: "sobre-mi" },
     { label: "Contacto", href: "#contacto", id: "contacto" },
   ],
