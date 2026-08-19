@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="g2d3f1a4e-t">
+  <title id="g2d3f1a4e-t">Valorización de refrigerantes</title>
+  <defs>
+    <linearGradient id="g2d3f1a4e" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#8A6A45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g2d3f1a4e)"/>
+  <circle cx="294" cy="397" r="146" fill="#FFFFFF" opacity="0.093"/>
+  <circle cx="328" cy="626" r="171" fill="#FFFFFF" opacity="0.128"/>
+  <circle cx="444" cy="185" r="146" fill="#FFFFFF" opacity="0.136"/>
+  <rect x="496" y="288" width="338" height="338" fill="#FFFFFF" opacity="0.05" transform="rotate(10 665 457)"/>
+  <text x="72" y="562" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="500" fill="#FFFFFF" opacity="0.75" letter-spacing="2">AUTOMATIZACIÓN</text>
+  <text font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="49" font-weight="700" fill="#FFFFFF"><tspan x="72" y="621">Valorización de refrigerantes</tspan></text>
+</svg>

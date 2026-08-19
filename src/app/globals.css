@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   SISTEMA DE TOKENS — dos capas.
+
+   Capa 1 (brand-*): la paleta del brief. Es IDENTIDAD DE MARCA, no color de
+   texto. Medido con WCAG 2.1: #6B9D9D sobre blanco da 3,03:1 y #D4A574 da
+   2,23:1 — ambos por debajo del 4,5:1 que exige AA para texto normal.
+   Usar solo en: formas decorativas, degradados, bordes, divisores e iconos
+   grandes.
+
+   Capa 2 (semántica): lo ÚNICO que deben consumir los componentes.
+   Si un componente necesita un color, sale de aquí. No saltar a brand-*.
+   ========================================================================== */
+
+@theme {
+  /* ---- Capa 1: MARCA (del brief) ---- */
+  --color-brand-primary: #6b9d9d; /* 3,03:1 sobre blanco — NO para texto normal */
+  --color-brand-secondary: #2c3e50;
+  --color-brand-accent: #d4a574; /* 2,23:1 sobre blanco — NO como texto sobre claro */
+  --color-brand-light: #e8f2f2;
+  --color-brand-dark: #1a2332;
+
+  /* ---- Capa 1b: rampa teal accesible derivada ---- */
+  --color-teal-600: #0f766e; /* 5,47:1 sobre blanco — AA */
+  --color-teal-700: #115e59; /* 7,58:1 sobre blanco — AAA */
+
+  /* ---- Capa 2: SEMÁNTICA ---- */
+  --color-ink: #1a2332; /* 15,78:1 sobre blanco */
+  --color-ink-muted: #2c3e50; /* 10,98:1 sobre blanco */
+  --color-link: #0f766e; /* enlaces y UI pequeña */
+  --color-ink-on-dark: #e8f2f2; /* 13,84:1 sobre brand-dark */
+  --color-accent-on-dark: #d4a574; /* 7,09:1 sobre brand-dark — su sitio real */
+  --color-surface: #ffffff;
+  --color-surface-muted: #e8f2f2;
+  --color-surface-dark: #1a2332;
+  --color-border-subtle: #cfe0e0; /* borde decorativo, no texto */
+  --color-border-strong: #6b9d9d; /* 3:1 — válido como borde de UI */
+  --color-focus-ring: #115e59;
+
+  /* ---- Tipografía: San Francisco ----
+     San Francisco es propietaria de Apple y no se puede servir por CSS: se
+     invoca con `-apple-system` / `BlinkMacSystemFont`, que la resuelven en
+     macOS e iOS. En Windows y Android caemos a la fuente de sistema
+     equivalente (Segoe UI Variable, Roboto), que es lo que hacen Apple y
+     GitHub. Una misma pila para títulos y cuerpo: San Francisco está pensada
+     para funcionar en todo el rango de tamaños. */
+  --font-system:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI Variable Text", "Segoe UI", Roboto, ui-sans-serif, system-ui,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-system);
+  --font-body: var(--font-system);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+@layer base {
+  html {
+    /* Compensa la navbar sticky al saltar a un ancla. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  /* El scroll suave solo si el usuario no ha pedido reducir movimiento. */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    text-wrap: balance;
+    /* San Francisco pide tracking negativo en tamaños grandes: así es como la
+       usa el propio sistema de Apple. Sin esto los titulares se ven sueltos. */
+    letter-spacing: -0.022em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Foco siempre visible. Nunca outline:none sin sustituto. */
+  :focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-primary);
+    color: #ffffff;
+  }
+}
+
+/* ==========================================================================
+   REVELADO AL HACER SCROLL
+   Toda la animación vive aquí; el hook solo conmuta [data-revealed].
+   ========================================================================== */
+
+@layer components {
+  [data-revealed] {
+    --reveal-delay: 0ms;
+  }
+
+  [data-revealed="false"] {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  [data-revealed="true"] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s var(--ease-out) var(--reveal-delay),
+      transform 0.6s var(--ease-out) var(--reveal-delay);
+  }
+
+  /* Utilidad para texto solo para lectores de pantalla. */
+  .sr-only-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+/* ==========================================================================
+   RED DE SEGURIDAD DE MOVIMIENTO REDUCIDO
+   Independiente del chequeo en JS: si el JS falla, el movimiento sigue
+   suprimido. Va al final para ganar en cascada.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-revealed] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

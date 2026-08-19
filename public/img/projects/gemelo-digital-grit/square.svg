@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-labelledby="g8d017396-t">
+  <title id="g8d017396-t">Gemelo digital VPTSA</title>
+  <defs>
+    <linearGradient id="g8d017396" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#8A6A45"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#g8d017396)"/>
+  <circle cx="236" cy="582" r="196" fill="#FFFFFF" opacity="0.120"/>
+  <circle cx="788" cy="234" r="267" fill="#FFFFFF" opacity="0.123"/>
+  <circle cx="746" cy="121" r="127" fill="#FFFFFF" opacity="0.113"/>
+  <rect x="466" y="4" width="307" height="307" fill="#FFFFFF" opacity="0.05" transform="rotate(-25 619.5 157.5)"/>
+  <text x="54" y="750" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="500" fill="#FFFFFF" opacity="0.75" letter-spacing="2">AUTOMATIZACIÓN</text>
+  <text font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="65" font-weight="700" fill="#FFFFFF"><tspan x="54" y="828">Gemelo digital VPTSA</tspan></text>
+</svg>

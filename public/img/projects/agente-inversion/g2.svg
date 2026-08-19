@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="g7b0b5ab-t">
+  <title id="g7b0b5ab-t">Agente de inversión cuantitativa</title>
+  <defs>
+    <linearGradient id="g7b0b5ab" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#1A2332"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g7b0b5ab)"/>
+  <circle cx="1241" cy="964" r="317" fill="#FFFFFF" opacity="0.088"/>
+  <circle cx="37" cy="842" r="187" fill="#FFFFFF" opacity="0.073"/>
+  <circle cx="528" cy="62" r="284" fill="#FFFFFF" opacity="0.124"/>
+  <rect x="153" y="163" width="548" height="548" fill="#FFFFFF" opacity="0.05" transform="rotate(24 427 437)"/>
+  <text x="96" y="834" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="38" font-weight="500" fill="#FFFFFF" opacity="0.75" letter-spacing="2">LLMS</text>
+  <text font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF"><tspan x="96" y="920">Agente de inversión cuantitativa</tspan></text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="g8de2b255-t">
+  <title id="g8de2b255-t">Detección de EPI en obra</title>
+  <defs>
+    <linearGradient id="g8de2b255" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2C3E50"/>
+      <stop offset="100%" stop-color="#1A2332"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g8de2b255)"/>
+  <circle cx="217" cy="41" r="113" fill="#FFFFFF" opacity="0.130"/>
+  <circle cx="209" cy="69" r="113" fill="#FFFFFF" opacity="0.065"/>
+  <circle cx="229" cy="294" r="112" fill="#FFFFFF" opacity="0.071"/>
+  <rect x="183" y="401" width="258" height="258" fill="#FFFFFF" opacity="0.05" transform="rotate(13 312 530)"/>
+  <text x="72" y="562" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="500" fill="#FFFFFF" opacity="0.75" letter-spacing="2">VISIÓN</text>
+  <text font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="49" font-weight="700" fill="#FFFFFF"><tspan x="72" y="621">Detección de EPI en obra</tspan></text>
+</svg>

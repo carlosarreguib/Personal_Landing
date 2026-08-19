@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-labelledby="gd2f2d2c8-t">
+  <title id="gd2f2d2c8-t">Resumen automático de actas</title>
+  <defs>
+    <linearGradient id="gd2f2d2c8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#1A2332"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#gd2f2d2c8)"/>
+  <circle cx="254" cy="791" r="288" fill="#FFFFFF" opacity="0.134"/>
+  <circle cx="88" cy="782" r="137" fill="#FFFFFF" opacity="0.096"/>
+  <circle cx="177" cy="853" r="191" fill="#FFFFFF" opacity="0.075"/>
+  <rect x="259" y="185" width="404" height="404" fill="#FFFFFF" opacity="0.05" transform="rotate(-9 461 387)"/>
+  <text x="54" y="672" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="500" fill="#FFFFFF" opacity="0.75" letter-spacing="2">LLMS</text>
+  <text font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="65" font-weight="700" fill="#FFFFFF"><tspan x="54" y="750">Resumen automático de</tspan><tspan x="54" y="828">actas</tspan></text>
+</svg>
